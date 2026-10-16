@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+<header>
+    <h1> Movie Ticket Booking System</h1>
+</header>
+
+<div class="container">
+
+    <div class="booking">
+        <h2>Book Your Tickets</h2>
+
+        <form id="bookingForm">
+            <label>Select Movie</label>
+            <select id="movie" required>
+                <option value="">Choose Movie</option>
+                <option value="Inception">Inception - Rs.150</option>
+                <option value="The Lion King">The Lion King - Rs.120</option>
+                <option value="Avengers Endgame">Avengers Endgame - Rs.180</option>
+            </select>
+
+            <label>Show Time</label>
+            <select id="time" required>
+                <option value="">Choose Time</option>
+                <option>10:00 AM</option>
+                <option>2:00 PM</option>
+                <option>6:00 PM</option>
+            </select>
+
+            <label>Email Address</label>
+            <input type="email" id="email"
+                   placeholder="Enter your email" required>
+
+            <label>Number of Tickets</label>
+            <input type="number" id="tickets"
+                   min="1" step="1" placeholder="Enter tickets" required>
+
+            <p>Total Price: Rs<span id="total">0</span></p>
+
+            <button type="submit">Book Tickets</button>
+            <button type="reset" class="reset">Reset</button>
+        </form>
+
+        <p id="message"></p>
+    </div>
+
+    <div class="bookings">
+        <h2>Your Bookings (<span id="count">0</span>)</h2>
+        <input type="text" id="search"
+               placeholder="Search movie name">
+
+        <div id="bookingList">No bookings yet.</div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
